@@ -74,13 +74,13 @@
   cursor: pointer;
   display: none;
 }
-.conNavBar .conNavBar .rightSection a {
+.conNavBar .rightSection a {
   font-size: 22px;
   padding-right: 7px;
   color: #ffd8d8;
   text-decoration: none;
 }
-.conNavBar .conNavBar .rightSection > i {
+.conNavBar .rightSection > i {
   color: aliceblue;
   font-size: 21px;
   padding-left: 10px;
@@ -128,18 +128,6 @@
     font-size: 20px;
     margin: 20px;
     padding: 0 15px;
-  }
-  .conNavBar .rightSection a {
-    font-size: 22px;
-    padding-right: 7px;
-    color: #ffd8d8;
-    text-decoration: none;
-  }
-  .conNavBar .rightSection > i {
-    color: aliceblue;
-    font-size: 21px;
-    padding-left: 10px;
-    cursor: pointer;
   }
 }
 .container {

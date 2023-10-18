@@ -236,7 +236,7 @@ nav .logo {
   nav .mainMenu {
     height: 300px;
     position: fixed;
-    top: 0px;
+    top: -100%;
     right: 0px;
     left: 0px;
     z-index: 1000;

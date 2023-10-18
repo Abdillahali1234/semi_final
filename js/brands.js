@@ -10,11 +10,11 @@ let menuBtn = document.querySelector(".bars");
 let closeBtn = document.querySelector(".close-btn");
 
 menuBtn.addEventListener("click", () => {
-  menu.classList.add("active");
+  menu.classList.add("activeNav");
 });
 
 closeBtn.addEventListener("click", () => {
-  menu.classList.remove("active");
+  menu.classList.remove("activeNav");
 });
 
 // show cars in document
