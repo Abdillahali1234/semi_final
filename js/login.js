@@ -9,7 +9,7 @@ btn.addEventListener("click", (e) => {
     let data = JSON.parse(dataObject);
     if (data.Email === email.value && data.passwd === passwd.value) {
       setTimeout(() => {
-        location.href = "home.html";
+        location.href = "index.html";
       }, 2000);
       let status=true;
       localStorage.setItem("status",status)
