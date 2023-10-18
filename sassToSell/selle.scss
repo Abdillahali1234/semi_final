@@ -1,0 +1,18 @@
+@import "../sassTodetails/layout/navBar";
+@import "sections";
+@import "../sassToHome/contactSe";
+.active {
+  background-color: white;
+  color: black !important;
+}
+
+* {
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+body{
+  margin: 0;
+}

@@ -1,0 +1,184 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.pageLogin {
+  background-image: url("https://cdn.jdpower.com/JDP_2023%20BMW%20330i%20M%20Sport%20Brooklyn%20Gray%20Front%20Quarter%20View.jpg");
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-clip: border-box;
+  /* background-position: center; */
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  flex-direction: column;
+}
+.pageLogin::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.273);
+  padding: 0;
+  margin: 0;
+  top: 0;
+}
+.pageLogin form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+  z-index: 10;
+  box-shadow: 5px 10px 8px 10px #888888;
+  border-radius: 5px;
+}
+
+.pageLogin form input:not(:last-of-type) {
+  width: 300px;
+  padding: 14px;
+  background-color: rgb(89, 89, 89);
+  outline: none;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  font-size: 18px;
+}
+.pageLogin form input::placeholder {
+  font-size: 20px;
+  font-style: italic;
+}
+.pageLogin form input[type="submit"] {
+  width: fit-content;
+  margin: auto;
+  position: absolute;
+  bottom: -77px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* width: 81px; */
+  padding: 13px;
+  background-color: rgb(89, 89, 89);
+  color: white;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  font-size: 18px;
+  /* text-transform: uppercase; */
+  cursor: pointer;
+  font-variant: small-caps;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.pageLogin h1 {
+  font-size: 5rem;
+  text-transform: uppercase;
+  font-style: italic;
+  color: rgb(70, 152, 228);
+  text-align: center;
+  font-family: "Young Serif", serif;
+}
+.pageLogin h1 span {
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-style: italic;
+  color: rgb(49, 79, 93);
+  text-align: center;
+  display: inline;
+}
+
+.alertBox {
+  position: absolute;
+  top: 5%;
+  right: 1%;
+  z-index: 9999;
+  border: 2px solid #eee;
+  background-color: #fff;
+  width: 400px;
+  height: 80px;
+  -moz-box-shadow: inset 0 0 2px #000000;
+  -webkit-box-shadow: inset 0 0 2px #000000;
+  box-shadow: inset 0 0 2px #000000;
+  border-left: 2px solid red;
+  -webkit-animation: fadein 0.5s;
+  animation: fadein 0.5s;
+}
+
+.alertClose {
+  color: #aaaaaa;
+  float: right;
+  font-size: 20px;
+  margin: 2px 15px;
+  cursor: pointer;
+}
+
+.alertClose:hover {
+  color: #000;
+}
+
+.notification-sign {
+  color: red;
+  font-size: 25px;
+  position: absolute;
+  bottom: 20%;
+  left: 5%;
+}
+
+.alertBox h1 {
+  color: #000;
+  margin: 5px 10px;
+  text-align: left;
+  font-size: 17px;
+}
+
+.alertBox p {
+  text-align: center;
+  font-size: 23px;
+  font-family: arial;
+  color: #6b6a6a;
+  margin: 15px 30px;
+}
+
+/* Animations to fade the snackbar in and out */
+/* @-webkit-keyframes fadein {
+  from {
+    right: 0;
+    opacity: 0;
+  }
+  to {
+    right: 1%;
+    opacity: 1;
+  }
+} */
+
+@keyframes fadein {
+  from {
+    right: 0;
+    opacity: 0;
+  }
+  to {
+    right: 1%;
+    opacity: 1;
+  }
+}
+@keyframes fadOut {
+  from {
+    right: 1%;
+    opacity: 1;
+  }
+  to {
+    right: 0;
+    opacity: 0;
+  }
+}

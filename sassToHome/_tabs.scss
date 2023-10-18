@@ -1,0 +1,124 @@
+.bestCarFromCat {
+  color: white;
+  padding: 30px 0;
+  display: flex;
+  flex-direction: column;
+  .category {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    background: gray;
+    padding: 0;
+    border-radius: 15px;
+    font-size: 20px;
+    li {
+      padding: 10px 30px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+  }
+
+  .categoryContent {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 40px;
+    > div {
+      display: none;
+      opacity: 0;
+      transition: 0.3s all ease-in;
+      width: 100%;
+      height: 500px;
+      transform: scale(0) transition 0.3s;
+      background-repeat: no-repeat;
+      background-size: cover;
+      align-items: center;
+      transition: 0.3s;
+      border-radius: 5px;
+      cursor: pointer;
+      filter: grayscale(.8);
+      &:hover{
+        filter: grayscale(0);
+      }
+      &.activeDiv {
+        display: flex;
+        opacity: 1;
+        transform: scale(0.8);
+      }
+      > div {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        background: rgba(20, 133, 213, 0.641);
+        width: fit-content;
+        padding: 10px 90px 10px 10px;
+        gap: 20px;
+        button {
+          outline: none;
+          border: none;
+          padding: 10px 33px;
+          border-radius: 8px;
+          font-size: 25px;
+          font-weight: 600;
+          background-color: transparent;
+          border: 1px solid white;
+          color: white;
+          transition: 0.3s all;
+          cursor: pointer;
+          text-transform: capitalize;
+          &:hover {
+            background-color: white;
+            color: var(--mainColor);
+          }
+        }
+        h2 {
+          font-size: 37px;
+          font-weight: 500;
+          position: relative;
+
+          &::before {
+            content: "";
+            position: absolute;
+            width: 165px;
+            height: 5px;
+            background: aliceblue;
+            bottom: -18px;
+          }
+        }
+        span {
+          font-size: 22px;
+        }
+      }
+    }
+    .div-1 {
+      background-image: url("https://static.ed.edmunds-media.com/unversioned/unit-gw/high-impact/2023/best-suvs-volkswagen-taos-1184x476.jpg");
+    }
+    .div-2 {
+      background-image: url("https://static.ed.edmunds-media.com/unversioned/unit-gw/high-impact/2023/best-hybrids-honda-insight-1184x476.jpg");
+    }
+    .div-3 {
+      background-image: url("https://static.ed.edmunds-media.com/unversioned/unit-gw/high-impact/2021/best-sedans-toyota-avalon-1184x476.jpg");
+    }
+    .div-4 {
+      background-image: url("https://static.ed.edmunds-media.com/unversioned/unit-gw/high-impact/2021/best-trucks-ford-f-150-1184x476.jpg");
+    }
+  }
+}
+
+.activeTab {
+  color: rgb(3, 11, 16);
+  //   border-bottom: 2px solid ;
+  background-color: var(--mainColor);
+  border-radius: 15px;
+}
+
+
+@media(max-width:768px){
+  .category{
+    li{
+      padding: 10px  !important;
+    }
+  }
+}

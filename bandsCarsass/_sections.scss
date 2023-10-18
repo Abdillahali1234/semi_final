@@ -1,0 +1,220 @@
+.section-1 {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+  display: flex;
+  padding: 50px 0;
+  background-color: white;
+  img {
+    width: 147px;
+  }
+  h1 {
+    font-size: 44px;
+    color: #444;
+    font-style: italic;
+    font-weight: 500;
+    transition: all 0.3s;
+    cursor: pointer;
+    &:hover {
+      color: black;
+    }
+  }
+}
+.section-2 {
+  background-color: rgb(247, 246, 245);
+  display: grid;
+  grid-template-columns: 30% 70%;
+  gap: 30px;
+  padding: 30px 50px;
+  .filterIcon {
+    display: none;
+    align-items: center;
+    gap: 20px;
+    color: rgb(5, 52, 255);
+    border: 1px solid rgb(5, 52, 255);
+    width: 100%;
+    justify-content: center;
+    padding: 12px 0;
+    cursor: pointer;
+  }
+  .containerToCars {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minMax(300px, 1fr));
+    gap: 20px;
+    .carBox {
+      //   width: fit-content;
+      //   height: 462px;
+      .imgBox {
+        margin-bottom: 4px;
+        // min-height: 257px;
+        img {
+          width: 100%;
+          border-bottom: 1px solid #f2f2f2;
+          height: 100%;
+        }
+      }
+      overflow: hidden;
+      background: white;
+      border-radius: 12px;
+      border: 2px solid rgba(68, 68, 68, 0.2666666667);
+      transition: all 0.25s ease-in-out 0s;
+      &:hover {
+        box-shadow: rgba(0, 0, 0, 0.1) 3px 0px 180px 10px,
+          rgba(0, 0, 0, 0.16) 11px 8px 8px -8px;
+      }
+      cursor: pointer;
+      cursor: pointer;
+      .content {
+        padding-left: 13px;
+        .name {
+          h3 {
+            color: rgb(36, 45, 61);
+            font-weight: 700;
+            span {
+              color: #555;
+              font-weight: 400;
+            }
+          }
+          .shape {
+            color: #999;
+          }
+        }
+        .details {
+          color: rgb(102, 102, 102);
+          display: flex;
+          flex-direction: column;
+          justify-content: start;
+          > div:first-child {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 20px;
+            font-style: italic;
+            svg {
+              width: 26px;
+              height: 43px;
+            }
+          }
+          > div:last-child {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 20px;
+            font-style: italic;
+            i {
+              color: black;
+              font-size: 20px;
+            }
+          }
+        }
+        .price {
+          padding-top: 7px;
+          border-top: 1px solid #cbcbcb;
+          margin-top: 19px;
+          margin-right: 10px;
+          margin-left: 10px;
+          padding-bottom: 8px;
+        }
+      }
+    }
+  }
+}
+
+.filter {
+  background-color: white;
+  height: fit-content;
+  padding: 10px 12px;
+  border-radius: 15px;
+  .tittle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .xmarkIcon {
+      display: none;
+      color: rgb(5, 52, 255);
+      font-size: 24px;
+      cursor: pointer;
+    }
+    .xmarkIcon.active{
+      display: inline-block;
+    }
+    h3 {
+      padding: 10px 0;
+      color: #333;
+      font-size: 31px;
+      text-transform: capitalize;
+      font-weight: 400;
+    }
+    button {
+      color: rgb(5, 52, 255);
+      text-decoration: underline;
+      appearance: none;
+      border: none;
+      background: none;
+      cursor: pointer;
+      font-size: 18px;
+    }
+  }
+  form {
+    label {
+      text-transform: capitalize;
+    }
+    select {
+      width: 100%;
+      padding: 16px 20px;
+      border: none;
+      border-radius: 4px;
+      background-color: #f1f1f1;
+      text-transform: capitalize;
+      font-weight: 500;
+      font-size: 17px;
+    }
+    .minMaxprice {
+      display: grid;
+      grid-template-columns: 46% 46%;
+      gap: 20px;
+      font-size: 17px;
+    }
+    input[type="submit"] {
+      border: none;
+      outline: none;
+      padding: 10px 10px;
+      width: fit-content;
+      margin: auto;
+      display: block;
+      margin-top: 12px;
+      border-radius: 8px;
+      font-size: 18px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+  }
+}
+
+@media (max-width: 758px) {
+  .filter {
+    // display: none;
+    position: absolute;
+    // top: 63px;
+    top: -100%;
+    width: 100%;
+    transition: all 0.4s;
+  }
+  .section-2 {
+    /* grid-template-columns: 0% 100%; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .filterIcon {
+      display: flex;
+    }
+  }
+  .section-1 {
+    img {
+      width: 100px;
+    }
+    h1 {
+      font-size: 25px;
+    }
+  }
+}

@@ -1,0 +1,37 @@
+hr {
+  margin-top: 20px;
+}
+
+main {
+  height: calc(100vh - 86px);
+  padding-top: 10px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 70% 30%;
+  grid-template-columns: 70% 30%;
+}
+main .boxImages {
+  border-radius: 5px;
+  overflow: hidden;
+  border: 1px solid transparent;
+  -webkit-transition: all 0.6s ease-in-out 0s;
+  transition: all 0.6s ease-in-out 0s;
+  cursor: pointer;
+}
+main .boxImages img {
+  width: 100%;
+}
+main .boxImages:hover {
+  border-color: #a4a3a3;
+  background-color: rgb(204, 204, 204);
+}
+main .customizePay .tittle > div:first-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+  padding: 10px 0;
+}

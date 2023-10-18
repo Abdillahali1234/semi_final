@@ -1,0 +1,10 @@
+@import "sections";
+// edit height to nav bar
+@import "../sassToHome/contactSe";
+
+@import "../sassTodetails/layout/navBar";
+// active to page
+.active {
+  background-color: white;
+  color: black !important;
+}

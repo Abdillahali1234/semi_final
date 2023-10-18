@@ -1,0 +1,96 @@
+@mixin circle($width, $height) {
+  width: $width;
+  height: $height;
+  border-radius: 50%;
+}
+// media query
+@mixin breakpoints($point) {
+  @if $point == mobile {
+    @media (max-width: 767px) {
+      @content;
+    }
+  } @else if $point == small {
+    @media (max-width: 991px) {
+      @content;
+    }
+  } @else if $point == medium {
+    @media (min-width: 992px) and (max-width: 1199px) {
+      @content;
+    }
+  } @else if $point == large {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  }
+}
+// end media query
+// varibles
+:root {
+  --main-color: rgb(80, 147, 223);
+}
+// card styles
+header {
+  background-color: var(--main-color);
+  position: fixed;
+  width: 100vw;
+  z-index: 9999999999;
+}
+.navBar {
+  display: flex;
+  gap: 22px;
+  padding: 10px 30px;
+  align-items: center;
+  .logo img {
+    @include circle(60px, 60px);
+  }
+  .navBar-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    .leftSections .mainUl {
+      display: flex;
+      gap: 10px;
+      li a {
+        text-decoration: none;
+        color: white;
+        font-size: 20px;
+      }
+    }
+    .leftSections ul .notifactions {
+      color: rgb(232, 76, 76);
+      position: absolute;
+      /* left: 0; */
+      top: -4px;
+      right: -16px;
+      display: none;
+    }
+    .rightSection {
+      form {
+        position: relative;
+      }
+      .input1 {
+        padding: 10px;
+        border-radius: 25px;
+        outline: none;
+        border: none;
+        padding-left: 40px;
+      }
+      i {
+        position: absolute;
+        left: 10px;
+        top: 9px;
+      }
+      form input[type="submit"] {
+        padding: 10px;
+        border-radius: 10px;
+        z-index: -1;
+        /* left: 98px; */
+        right: -73px;
+        top: 0;
+        border: none;
+        outline: none;
+      }
+    }
+  }
+}

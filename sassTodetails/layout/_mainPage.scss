@@ -1,0 +1,469 @@
+@import "./slider";
+
+hr {
+  margin-top: 20px;
+}
+
+main {
+  // height: calc(100vh - 86px);
+  padding-top: 10px;
+  display: grid;
+  grid-template-columns: 60% 35%;
+  column-gap: 100px;
+  align-items: start;
+  .boxImages {
+    transition: all 0.6s ease-in-out 0s;
+    height: fit-content;
+    width: 100%;
+    border-color: #a4a3a3;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    .fuatersFriends {
+      h4 {
+        text-transform: uppercase;
+        font-size: 18px;
+        margin-bottom: 0;
+        color: #494949;
+        padding: 20px 0;
+      }
+    }
+    .galleryView {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      top: 20px;
+      right: 20px;
+      background: white;
+      padding: 5px;
+      border-radius: 4px;
+      cursor: pointer;
+      span:first-child {
+        color: rgb(72, 113, 217);
+      }
+      span:last-child {
+        font-size: 25px;
+        font-weight: 500;
+        font-variant: small-caps;
+      }
+    }
+
+    img {
+      width: 100%;
+      border: 1px solid #a4a3a3;
+      border-radius: 7px;
+      background-color: rgb(204, 204, 204);
+    }
+    .futuresInCar {
+      border-radius: 5px;
+      padding: 20px 21px;
+      background: rgb(241, 244, 249);
+      h3 {
+        font-size: 23px;
+        margin: 15px 0;
+        text-transform: uppercase;
+      }
+      div {
+        display: flex;
+        background-color: white;
+        border-radius: 5px;
+        padding: 0 10px;
+        box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px,
+          rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+        flex-direction: column;
+        ul {
+          padding: 0;
+          margin: 13px 0;
+          li {
+            display: flex;
+            align-items: center;
+            font-size: 17px;
+            flex-wrap: nowrap;
+            gap: 40px;
+            > span:first-child {
+              width: 120px;
+              color: black;
+              font-size: 20px;
+              font-style: italic;
+              font-weight: 600;
+            }
+            > span:nth-child(2) {
+              font-weight: 500;
+            }
+          }
+        }
+      }
+    }
+  }
+  .customizeAll {
+    .tittle {
+      > div:first-child {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding: 10px 0;
+        span {
+          background-color: rgb(72, 113, 217);
+          border-radius: 4px;
+          padding: 3px;
+        }
+      }
+      h2 {
+        font-weight: 500;
+        text-transform: capitalize;
+        line-height: 1.4;
+      }
+    }
+    .customizeVec,
+    .customizePayMent {
+      margin-bottom: 20px;
+      form {
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        border: 1px solid rgb(209, 208, 207);
+        padding: 18px 23px;
+        border-radius: 5px;
+        > h3 {
+          line-height: 2;
+          font-size: 28px;
+          font-weight: 500;
+        }
+        .options {
+          display: flex;
+          justify-content: space-between;
+          position: relative;
+          button {
+            width: 152px;
+            padding: 5px;
+            border: none;
+            outline: none;
+            border: 1px solid rgb(199, 199, 199);
+            // filter: grayscale(50%);
+            border-radius: 3px;
+            font-size: 18px;
+            text-transform: capitalize;
+            background-color: white;
+            color: #a4a3a3;
+            cursor: no-drop;
+            &:nth-child(2) {
+              position: absolute;
+              left: 148px;
+              border: 2px solid rgb(20, 131, 213);
+              cursor: pointer;
+              color: black;
+            }
+          }
+          .btnInfo {
+            font-size: 24px;
+            color: blue;
+            cursor: pointer;
+          }
+          .offcanvas-menu {
+            position: fixed;
+            top: 0;
+            right: 0;
+            background: white;
+            width: 500px;
+            height: 100vh;
+            bottom: 0;
+            display: flex;
+            align-items: center;
+            transform: translateX(100%);
+            transition: all 0.4s ease;
+            z-index: 1000;
+            > div {
+              display: flex;
+              flex-direction: column;
+              padding: 0 20px;
+              gap: 100px;
+              > div {
+                h3 {
+                  line-height: 2;
+                  font-size: 28px;
+                  text-transform: capitalize;
+                  font-weight: 500;
+                }
+                p {
+                  font-weight: 500;
+                  line-height: 1.3;
+                  font-size: 17px;
+                }
+              }
+            }
+          }
+          .offcanvas-menu.activeInfo {
+            transform: translateX(0);
+          }
+
+          .closeBtn {
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            font-size: 30px;
+            color: rgb(20, 131, 213);
+            cursor: pointer;
+          }
+        }
+        label {
+          padding-top: 20px;
+          font-weight: 600;
+          font-size: 17px;
+          color: rgb(20, 131, 213);
+        }
+        select {
+          padding: 10px;
+          color: black;
+          font-size: 17px;
+          font-weight: 500;
+        }
+        select[editable] > button {
+          stroke: #f00 !important;
+        }
+        .delivery {
+          display: flex;
+          background-color: rgb(242, 249, 242);
+          margin-top: 20px;
+          align-items: center;
+          gap: 11px;
+          border: 1px solid rgb(0, 136, 0);
+          padding: 6px;
+          border-radius: 3px;
+          img {
+            width: 33px;
+          }
+
+          span {
+            line-break: anywhere;
+            font-size: 17px;
+          }
+        }
+      }
+    }
+    .customizePayMent {
+      .optionsTime,
+      .payMony {
+        background-color: rgb(255, 255, 255);
+        border-radius: 2px;
+        box-shadow: rgb(209, 208, 207) 0px 0px 0px 1px;
+        color: rgb(102, 102, 102);
+        display: flex;
+        list-style: none;
+        display: flex;
+        > div {
+          width: calc(100% / 3);
+          padding: 5px 0;
+          position: relative;
+        }
+        > div:first-child::after,
+        > div:nth-child(2)::after {
+          content: "";
+          top: 50%;
+          position: absolute;
+          background: rgb(184, 184, 184);
+          height: 80%;
+          width: 1px;
+          right: -2px;
+          transform: translateY(-50%);
+        }
+        .activeOptions {
+          border: 2px solid rgb(20, 131, 213);
+        }
+        label {
+          border-radius: 2px;
+          cursor: pointer;
+          display: block;
+          height: 100%;
+          min-height: 40px;
+          padding: 8px;
+          position: relative;
+          text-align: center;
+          width: 100%;
+          color: black;
+        }
+        input {
+          border: 0;
+          clip: rect(0 0 0 0);
+          height: 1px;
+          margin: -1px;
+          overflow: hidden;
+          padding: 0;
+          position: absolute;
+          width: 1px;
+        }
+      }
+      .payMony {
+        > div:first-child::after,
+        > div:nth-child(2)::after,
+        > div:nth-child(3)::after,
+        > div:nth-child(4)::after {
+          content: "";
+          top: 50%;
+          position: absolute;
+          background: rgb(184, 184, 184);
+          height: 80%;
+          width: 1px;
+          right: -1px;
+          transform: translateY(-50%);
+        }
+      }
+    }
+    .orderDiv {
+      position: sticky;
+      margin: initial;
+      z-index: 1;
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 10px 0px,
+        rgba(0, 0, 0, 0.1) 0px 0px 2px 0px;
+      bottom: 0;
+      background-color: white;
+      border-radius: 5px;
+      padding: 20px 0;
+      > div:first-child {
+        display: flex;
+        justify-content: space-between;
+        padding: 15px 30px;
+        h4 {
+          font-size: 22px;
+          span {
+            color: rgb(36, 45, 61);
+            font-size: 16px;
+            padding-left: 4px;
+          }
+        }
+      }
+      > div:last-child {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 30px;
+        padding-bottom: 13px;
+        align-items: center;
+        button {
+          border: none;
+          outline: none;
+          padding: 15px 20px;
+          cursor: pointer;
+          border-radius: 26px;
+          background: rgb(5, 52, 255);
+          color: white;
+          font-size: 18px;
+          width: 80%;
+        }
+        i {
+          border-radius: 27px;
+          cursor: pointer;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 10px 0px;
+          min-width: 54px;
+          height: 54px;
+          margin-left: 16px;
+          padding: 0px;
+          border: 0px none;
+          background: transparent;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1011px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+@mixin container2() {
+  .container2 {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Small devices (landscape phones, 576px and up) */
+  @media (min-width: 576px) {
+    .container2 {
+      width: 576px;
+    }
+  }
+
+  /* Medium devices (tablets, 768px and up) */
+  @media (min-width: 768px) {
+    .container2 {
+      width: 750px;
+    }
+  }
+
+  /* Large devices (desktops, 992px and up) */
+  @media (min-width: 992px) {
+    .container2 {
+      width: 970px;
+    }
+  }
+
+  /* X-Large devices (large desktops, 1200px and up) */
+  @media (min-width: 1200px) {
+    .container2 {
+      width: 1300px;
+    }
+  }
+}
+
+@include container2();
+.move {
+  a {
+    padding: 0 0 0 7px;
+    text-decoration: none;
+    color: rgb(0 0 0);
+  }
+  i {
+    color: rgb(20, 131, 213);
+  }
+}
+
+.layout {
+  width: 500px;
+  position: absolute;
+  top: -100%;
+  background: rgb(20, 131, 213);
+  left: 50%;
+  z-index: 11;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  padding: 20px 0;
+  transition: .5s ease-in; 
+  form {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minMax(200px, 1fr));
+    input {
+      border: none;
+      outline: none;
+      padding: 14px;
+      border-radius: 5px;
+      font-size: 18px;
+    }
+    input[type="submit"] {
+      width: fit-content;
+      font-size: 15px;
+      background: rgb(0 147 255);
+      color: white;
+      margin: auto;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+  }
+}
+.layout.activeLayout {
+  top: 50% !important;
+}
