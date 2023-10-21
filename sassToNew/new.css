@@ -36,6 +36,9 @@ header {
   justify-content: space-between;
   width: 100%;
 }
+.navBar .navBar-content .iconISmall {
+  display: none;
+}
 .navBar .navBar-content .leftSections .mainUl {
   display: flex;
   gap: 10px;
@@ -53,22 +56,22 @@ header {
   right: -16px;
   display: none;
 }
-.navBar .navBar-content .rightSection form {
+.navBar .navBar-content .midSection form {
   position: relative;
 }
-.navBar .navBar-content .rightSection .input1 {
+.navBar .navBar-content .midSection .input1 {
   padding: 10px;
   border-radius: 25px;
   outline: none;
   border: none;
   padding-left: 40px;
 }
-.navBar .navBar-content .rightSection i {
+.navBar .navBar-content .midSection i {
   position: absolute;
-  left: 10px;
-  top: 9px;
+  left: 0px;
+  top: 12px;
 }
-.navBar .navBar-content .rightSection form input[type=submit] {
+.navBar .navBar-content .midSection form input[type=submit] {
   padding: 10px;
   border-radius: 10px;
   z-index: -1;
@@ -79,6 +82,47 @@ header {
   outline: none;
 }
 
+@media (max-width: 768px) {
+  .navBar-content .midSection {
+    position: absolute !important;
+    padding: 0px;
+    bottom: -105px;
+    background: rgb(32, 112, 232);
+    height: 100px;
+    display: flex !important;
+    align-items: center;
+    border-radius: 8px;
+    padding: 10px;
+    right: -100%;
+    transition: 0.3s;
+  }
+  .navBar-content .midSection .headerInput {
+    width: 211px;
+  }
+  .navBar-content .midSection i {
+    position: absolute !important;
+    left: 8px !important;
+    top: 51px !important;
+  }
+  .navBar-content .iconISmall {
+    display: inline-block !important;
+    color: white;
+    font-size: 21px;
+    padding: 12px;
+    border-radius: 50%;
+    background: darkgray;
+    cursor: pointer;
+  }
+}
+.activeSerach {
+  right: 100px !important;
+}
+
+@media (max-width: 392px) {
+  .activeSerach {
+    right: 10px !important;
+  }
+}
 body {
   background-color: rgb(241, 244, 249);
 }

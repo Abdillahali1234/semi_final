@@ -167,3 +167,12 @@ submitSearch.addEventListener("click", () => {
 InputSearch.addEventListener("search", () => {
   location.reload()
 });
+
+
+// handle icons search in small screen
+
+let iconISmall = document.querySelector(".iconISmall");
+let midSection = document.querySelector(".midSection");
+iconISmall.addEventListener("click",()=>{
+  midSection.classList.add("activeSerach");
+})

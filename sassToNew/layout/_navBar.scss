@@ -48,6 +48,9 @@ header {
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    .iconISmall {
+      display: none;
+    }
     .leftSections .mainUl {
       display: flex;
       gap: 10px;
@@ -65,7 +68,7 @@ header {
       right: -16px;
       display: none;
     }
-    .rightSection {
+    .midSection {
       form {
         position: relative;
       }
@@ -78,8 +81,8 @@ header {
       }
       i {
         position: absolute;
-        left: 10px;
-        top: 9px;
+        left: 0px;
+        top: 12px;
       }
       form input[type="submit"] {
         padding: 10px;
@@ -94,3 +97,51 @@ header {
     }
   }
 }
+
+@media (max-width: 768px) {
+  .navBar-content {
+    .midSection {
+      position: absolute !important;
+      padding: 0px;
+      bottom: -105px;
+      background: rgb(32, 112, 232);
+      height: 100px;
+      display: flex !important;
+      align-items: center;
+      border-radius: 8px;
+      padding: 10px;
+      right: -100%;
+      .headerInput {
+        width: 211px;
+      }
+      transition: 0.3s;
+      i {
+        position: absolute !important;
+        left: 8px !important;
+        top: 51px !important;
+      }
+    }
+    .iconISmall {
+      display: inline-block !important;
+      color: white;
+      font-size: 21px;
+      padding: 12px;
+      border-radius: 50%;
+      background: darkgray;
+      cursor: pointer;
+    }
+  }
+}
+
+.activeSerach {
+  right: 100px !important;
+}
+
+@media (max-width: 392px) {
+  .activeSerach {
+    right: 10px !important;
+  }
+}
+// .activeSerachIn {
+//   right: 48px;
+// }
